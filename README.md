@@ -80,16 +80,6 @@ npm install
 npm start
 ```
 
-## 🔐 Environment Variables
-
-Create a `.env` file inside the backend folder:
-
-```env
-PORT=8000
-DB_NAME=nxtmart
-MONGO_URL=your_mongodb_connection_string
-```
-
 ## 🌟 Future Enhancements
 
 * Payment Gateway Integration
