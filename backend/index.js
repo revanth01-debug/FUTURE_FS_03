@@ -6,8 +6,10 @@ import cors from 'cors';
 
 const app = express();
 app.use(express.json());
+
 const allowedOrigins = [
   "https://nxt-mart-eta.vercel.app",
+  "https://future-fs-03-iclc-p4w17c3zr-revanth-portfolio.vercel.app",
   "http://localhost:5173",
   "http://127.0.0.1:5173",
 ];
@@ -15,26 +17,28 @@ const allowedOrigins = [
 app.use(cors({ origin: allowedOrigins }));
 
 dotenv.config();
-const PORT = process.env.PORT 
-const MONGO_URL = process.env.MONGO_URL 
-if(!MONGO_URL){
-      console.error("MongoURI is missing in .env file")
-      process.exit(1)
+
+const PORT = process.env.PORT;
+const MONGO_URL = process.env.MONGO_URL;
+
+if (!MONGO_URL) {
+  console.error("MongoURI is missing in .env file");
+  process.exit(1);
+}
+
+async function main() {
+  try {
+    await connectDB(MONGO_URL);
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (e) {
+    console.error("Failed to connect:", e.message);
+    process.exit(1);
   }
-  
+}
 
-  async function main(){
-      try{
-          await connectDB(MONGO_URL)
+main();
 
-          app.listen(PORT, ()=>{
-          })
-          
-
-      }catch(e){
-          console.error("Failed to connect:", e.message)
-          process.exit(1)
-      }
-  }
-  main()
-app.use("/",route)
+app.use("/", route);
