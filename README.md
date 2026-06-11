@@ -95,7 +95,7 @@ npm start
 
 NOTE : The frontend is deployed and publicly accessible. Backend deployment requires cloud hosting configuration and environment variables for database connectivity.
 
-URL LINK : https://future-fs-03-iclc-o7t3dklhv-revanth-portfolio.vercel.app/
+URL LINK : https://future-fs-03-iclc.vercel.app/
 
 * GitHub: https://github.com/revanth01-debug
 * LinkedIn: https://www.linkedin.com/in/radharapu-revanth/
