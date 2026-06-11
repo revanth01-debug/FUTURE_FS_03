@@ -94,6 +94,6 @@ npm start
 **Revanth Radharapu**
 
 * GitHub: https://github.com/revanth01-debug
-* LinkedIn: Add your LinkedIn profile link here
+* LinkedIn: https://www.linkedin.com/in/radharapu-revanth/
 
 
